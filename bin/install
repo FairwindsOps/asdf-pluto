@@ -37,14 +37,15 @@ install_pluto() {
 
 
 get_filename() {
-  local platform="$1"
-  echo "pluto-${platform}.tar.gz"
+  local platform="$2"
+  local version = "$1"
+  echo "pluto_${1}_${2}.tar.gz"
 }
 
 get_download_url() {
   local version="$1"
   local platform="$2"
-  local filename="$(get_filename $platform)"
+  local filename="$(get_filename $version $platform)"
   echo "https://github.com/FairwindsOps/pluto/releases/download/v${version}/${filename}"
 }
 
