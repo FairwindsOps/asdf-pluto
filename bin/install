@@ -37,8 +37,6 @@ install_pluto() {
 
 
 get_filename() {
-  local platform="$2"
-  local version = "$1"
   echo "pluto_${1}_${2}.tar.gz"
 }
 
